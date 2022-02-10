@@ -1,0 +1,30 @@
+
+{% extends "book/base.html" %}
+
+{% block title %}Overview{% endblock %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'book/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="cases">
+        {% if last_cases %}
+            {% for case in last_cases %}
+                <div class="case">
+                    <span class="name">{{ case.first_name }}<br>{{ case.last_name }}</span>
+    <!--            <span class="dates">{{ case.created_on}} {{ case.edited_on }}</span>-->
+                    <span class="desc">
+                        <a href="/edit/{{ case.id }}">edit</a>
+                        <a href="/delete/{{ case.id }}">delete</a>
+                    </span>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <form class="create-case" action="/create" method="post">
+            {% csrf_token %}
+            <input type="submit" value="+">
+        </form>
+    </div>
+{% endblock %}

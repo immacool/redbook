@@ -1,0 +1,10 @@
+{% extends "book/base.html" %}
+
+{% block title %}Delete case{% endblock %}
+
+{% block content %}
+    <form action="/delete/{{ pk }}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="delete">
+    </form>
+{% endblock %}

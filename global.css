@@ -1,0 +1,49 @@
+
+/*html {*/
+/*    background: linear-gradient(131.06deg, #1A1A28 20.93%, #050506 86.9%);*/
+/*    height: 100%;*/
+/*}*/
+
+p, span, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+input[type="text"] {
+    border: none;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 14px;
+    color: #050506;
+}
+
+/*input[type=submit] {*/
+/*    padding: 4px 14px;*/
+/*    background-color: #2a2a3f;*/
+/*    border: none;*/
+/*    border-radius: 90px;*/
+/*    color: white;*/
+/*    font-family: sans-serif;*/
+/*    font-size:16px;*/
+/*    margin: 15px;*/
+/*    transition: background-color 0.25s;*/
+/*}*/
+
+/*input[type=submit]:hover {*/
+/*    background-color: #34344b;*/
+/*}*/
+.header {
+    margin-top: 40px;
+}
+
+.title-icon {
+    margin-left: 50px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}

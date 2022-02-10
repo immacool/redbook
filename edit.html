@@ -1,0 +1,12 @@
+
+{% extends "book/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <form action="/edit/{{ file.id }}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Apply changes">
+    </form>
+{% endblock %}
