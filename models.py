@@ -4,6 +4,9 @@ from django.db import models
 
 
 class CaseFile(models.Model):
+    class Meta:
+        order = '-pub_date'
+    
     _uuid = models.CharField(max_length=36, default='undefined')
     first_name = models.CharField(max_length=40, default='undefined')
     last_name = models.CharField(max_length=40, default='undefined')
